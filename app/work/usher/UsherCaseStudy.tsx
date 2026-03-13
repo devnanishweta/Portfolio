@@ -287,7 +287,7 @@ export default function UsherCaseStudy() {
                 Universities invest millions in academic resources. Students still Google everything.
               </h2>
               <p className="font-sans text-base text-text-secondary leading-relaxed mb-5">
-                Despite world-class library databases and curated academic collections, students consistently default to Reddit, Google, and unreliable online sources for homework help. This isn't a laziness problem — it's a{' '}
+                Despite world-class library databases and curated academic collections, students consistently default to Reddit, Google, and unreliable online sources for homework help. This isn&apos;t a laziness problem — it&apos;s a{' '}
                 <strong className="text-text font-semibold">discovery and navigation problem</strong>.
               </p>
               <p className="font-sans text-base text-text-secondary leading-relaxed">
