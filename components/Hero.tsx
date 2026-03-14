@@ -109,7 +109,7 @@ export default function Hero() {
             variants={itemVariants}
             className="font-display text-5xl md:text-6xl lg:text-7xl text-text leading-tight mb-6 text-balance"
           >
-            Helping people get things done{' '}
+            I help people get things done{' '}
             <span className="relative">
               <span className="relative z-10 text-primary">through design</span>
               <svg
