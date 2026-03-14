@@ -10,11 +10,11 @@ export const siteConfig = {
   email: 'swetaux@gmail.com',
   location: 'Philadelphia, PA',
   availableForWork: true,
-  resumeUrl: '#', // Replace with actual resume PDF URL
+  resumeUrl: '/resume.pdf', // Put your resume PDF in public/resume.pdf (or change path and add file to public/)
   social: {
-    linkedin: 'https://linkedin.com/in/sweta-devnani',
-    dribbble: 'https://dribbble.com/swetadevnani', // Update if different
-    twitter: 'https://twitter.com/devnanisweta',
+    linkedin: 'https://www.linkedin.com/in/sweta-devnani/',
+    behance: 'https://www.behance.net/swetadevnani1',
+    email: 'mailto:swetaux@gmail.com',
   },
 }
 

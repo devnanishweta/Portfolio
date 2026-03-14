@@ -92,6 +92,7 @@ export default function Contact() {
               >
                 <a
                   href={siteConfig.resumeUrl}
+                  download="Sweta_Devnani_Resume.pdf"
                   className="inline-flex items-center gap-2 font-sans text-sm font-medium text-text-secondary hover:text-primary transition-colors"
                   aria-label="Download resume PDF"
                 >
