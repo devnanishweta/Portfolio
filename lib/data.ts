@@ -117,7 +117,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: 'Prototyping',
-    skills: ['Figma Prototyping', 'ProtoPie', 'Principle', 'Framer', 'Lottie'],
+    skills: ['Figma Prototyping', 'ProtoPie', 'Framer', 'Lottie'],
   },
   {
     name: 'Research & Testing',
