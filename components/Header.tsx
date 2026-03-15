@@ -38,10 +38,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border/30 ${
         scrolled
-          ? 'bg-background/90 backdrop-blur-md shadow-header'
-          : 'bg-transparent'
+          ? 'bg-background/80 backdrop-blur-xl shadow-[0_1px_0_rgba(255,255,255,0.5)_inset]'
+          : 'bg-background/30 backdrop-blur-lg shadow-[0_1px_0_rgba(255,255,255,0.4)_inset]'
       }`}
     >
       <div className="container-inner px-6 md:px-8 lg:px-12">
