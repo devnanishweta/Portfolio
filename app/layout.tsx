@@ -18,6 +18,9 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: 'Sweta — UX & Product Designer',
+  icons: {
+    icon: '/favicon.ico',
+  },
   description:
     'Portfolio of Sweta Devnani, a UX and product designer based in Philadelphia. Crafting intuitive, human-centered digital experiences across mobile, web, and AI-powered products.',
   keywords: [

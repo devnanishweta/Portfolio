@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { ArrowUpRight, ArrowLeft } from 'lucide-react'
 import CaseStudyHeader from '@/components/CaseStudyHeader'
 import Footer from '@/components/Footer'
+import { siteConfig } from '@/lib/data'
 
 // ─── Reusable animation helpers ────────────────────────────────────────────
 
@@ -405,20 +406,30 @@ export default function UsherCaseStudy() {
             </h3>
           </FadeUp>
 
-          {/* Video mockup */}
+          {/* Video mockup — use external URL if set (for Vercel); else local file */}
           <FadeUp delay={0.15} className="flex justify-center">
             <div
               className="relative overflow-hidden rounded-3xl"
               style={{ width: '280px', aspectRatio: '9 / 19.5' }}
             >
-              <video
-                src="/images/usher-mockup.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover object-center"
-              />
+              {siteConfig.usherMockupVideoUrl ? (
+                <iframe
+                  src={siteConfig.usherMockupVideoUrl}
+                  title="Usher prototype walkthrough"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                />
+              ) : (
+                <video
+                  src="/images/usher-mockup.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+              )}
             </div>
           </FadeUp>
 

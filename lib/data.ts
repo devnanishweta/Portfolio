@@ -11,6 +11,8 @@ export const siteConfig = {
   location: 'Philadelphia, PA',
   availableForWork: true,
   resumeUrl: '/resume.pdf', // Put your resume PDF in public/resume.pdf (or change path and add file to public/)
+  // Usher mockup video: too large for GitHub when self-hosted. Set to a YouTube/Vimeo embed URL to show on live site, or leave '' to use local /images/usher-mockup.mp4 (only works after compress + remove from .gitignore).
+  usherMockupVideoUrl: 'https://youtube.com/shorts/PzlW5SrnGI8?feature=share',
   social: {
     linkedin: 'https://www.linkedin.com/in/sweta-devnani/',
     email: 'mailto:swetaux@gmail.com',

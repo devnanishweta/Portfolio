@@ -62,9 +62,9 @@ export default function Header() {
             <span className="text-primary">.</span>
           </motion.a>
 
-          {/* Desktop Nav */}
+          {/* Desktop Nav — only in-page links; Resume is the CTA button below */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link, i) => (
+            {navLinks.filter((link) => !link.external).map((link, i) => (
               <motion.a
                 key={link.href}
                 href={link.href}
@@ -116,7 +116,7 @@ export default function Header() {
             className="md:hidden bg-background/95 backdrop-blur-md border-t border-border overflow-hidden"
           >
             <nav className="px-6 py-6 flex flex-col gap-5">
-              {navLinks.map((link) => (
+              {navLinks.filter((link) => !link.external).map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
