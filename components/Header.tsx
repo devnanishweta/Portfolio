@@ -47,12 +47,9 @@ export default function Header() {
       <div className="container-inner px-6 md:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Wordmark */}
-          <motion.a
+          <a
             href="#"
             className="font-display text-xl text-text hover:text-primary transition-colors duration-200"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
             onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -60,18 +57,15 @@ export default function Header() {
           >
             {siteConfig.name}
             <span className="text-primary">.</span>
-          </motion.a>
+          </a>
 
           {/* Desktop Nav — only in-page links; Resume is the CTA button below */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.filter((link) => !link.external).map((link, i) => (
-              <motion.a
+            {navLinks.filter((link) => !link.external).map((link) => (
+              <a
                 key={link.href}
                 href={link.href}
                 className="font-sans text-sm font-medium text-text-secondary hover:text-primary transition-colors duration-200 relative group"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.05 * i }}
                 onClick={(e) => {
                   e.preventDefault()
                   handleNavClick(link.href)
@@ -79,19 +73,16 @@ export default function Header() {
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary rounded-full transition-all duration-200 group-hover:w-full" />
-              </motion.a>
+              </a>
             ))}
-            <motion.a
+            <a
               href="https://drive.google.com/file/d/1BDb24SKa61eZT7dn6BfbzG24wJ1aM0WS/view?usp=sharing"
               className="btn-primary text-sm py-2.5 px-5"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
               target="_blank"
               rel="noopener noreferrer"
             >
               Resume
-            </motion.a>
+            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}

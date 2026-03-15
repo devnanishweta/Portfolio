@@ -98,7 +98,7 @@ export const caseStudies: CaseStudy[] = [
     description:
       'Built and operationalized an atomic design system with design tokens and reusable components. Launched flagship website that increased inbound inquiries by 50%.',
     tags: ['Design Systems', 'Atomic Design', 'Web Design'],
-    metrics: ['50% increase in inquiries', '45% faster turnaround', '6-min avg session duration'],
+    metrics: ['40% projected reduction in customer support calls', '6 usability tests conducted', '16-week end-to-end product design'],
     image: 'sharp.png',
     accentColor: '#C1694F',
     href: '/work/sharp',

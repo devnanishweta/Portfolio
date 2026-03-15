@@ -24,8 +24,8 @@ function FadeUp({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      initial={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay, ease: [0.25, 0.4, 0.25, 1] }}
       className={className}
     >
@@ -47,8 +47,8 @@ function SectionRow({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      initial={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
       className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-6 lg:gap-16"
     >
@@ -75,8 +75,8 @@ function StatCard({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      initial={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay, ease: [0.25, 0.4, 0.25, 1] }}
       className="bg-background rounded-2xl p-6 border border-border"
     >
@@ -101,8 +101,8 @@ function PullQuote({
   return (
     <motion.blockquote
       ref={ref}
-      initial={{ opacity: 0, x: -16 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
+      initial={{ opacity: 1, x: 0 }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.55, delay, ease: [0.25, 0.4, 0.25, 1] }}
       className="border-l-2 border-primary/40 pl-6 py-2"
     >
@@ -133,8 +133,8 @@ function InsightCard({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      initial={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.55, delay, ease: [0.25, 0.4, 0.25, 1] }}
       className="bg-background rounded-2xl p-8 border border-border relative overflow-hidden"
     >
@@ -172,8 +172,8 @@ function DecisionCard({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      initial={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay, ease: [0.25, 0.4, 0.25, 1] }}
       className="bg-background rounded-2xl overflow-hidden border border-border"
     >

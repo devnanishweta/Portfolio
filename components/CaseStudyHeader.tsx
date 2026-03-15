@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import { siteConfig } from '@/lib/data'
@@ -26,11 +25,7 @@ export default function CaseStudyHeader() {
       <div className="container-inner px-6 md:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Wordmark */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
+          <div>
             <Link
               href="/"
               className="font-display text-xl text-text hover:text-primary transition-colors duration-200"
@@ -38,15 +33,10 @@ export default function CaseStudyHeader() {
               {siteConfig.name}
               <span className="text-primary">.</span>
             </Link>
-          </motion.div>
+          </div>
 
           {/* Right side */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="flex items-center gap-6"
-          >
+          <div className="flex items-center gap-6">
             <Link
               href="/#work"
               className="inline-flex items-center gap-1.5 font-sans text-sm font-medium text-text-secondary hover:text-primary transition-colors duration-200"
@@ -60,7 +50,7 @@ export default function CaseStudyHeader() {
             >
               Let&apos;s Talk
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </header>

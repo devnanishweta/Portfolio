@@ -4,26 +4,6 @@ import { motion } from 'framer-motion'
 import { ArrowDown, Sparkles } from 'lucide-react'
 import { siteConfig } from '@/lib/data'
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] },
-  },
-}
-
 export default function Hero() {
   const scrollToWork = () => {
     const el = document.querySelector('#work')
@@ -74,16 +54,11 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="container-inner section-padding w-full">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-4xl"
-        >
+      <div className="container-inner section-padding w-full relative z-20">
+        <div className="max-w-4xl">
           {/* Available for work badge */}
           {siteConfig.availableForWork && (
-            <motion.div variants={itemVariants} className="mb-8">
+            <div className="mb-8">
               <span className="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-2 text-sm font-sans font-medium text-text-secondary">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -91,24 +66,18 @@ export default function Hero() {
                 </span>
                 Available for new projects
               </span>
-            </motion.div>
+            </div>
           )}
 
           {/* Greeting + name */}
-          <motion.p
-            variants={itemVariants}
-            className="font-sans text-text-secondary text-lg mb-4 flex items-center gap-2"
-          >
+          <p className="font-sans text-text-secondary text-lg mb-4 flex items-center gap-2">
             Hi, I&apos;m
             <span className="font-medium text-text">{siteConfig.name}</span>
             <Sparkles size={16} className="text-accent" />
-          </motion.p>
+          </p>
 
           {/* Main heading */}
-          <motion.h1
-            variants={itemVariants}
-            className="font-display text-5xl md:text-6xl lg:text-7xl text-text leading-tight mb-6 text-balance"
-          >
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-text leading-tight mb-6 text-balance">
             I help people get things done{' '}
             <span className="relative">
               <span className="relative z-10 text-primary">through design</span>
@@ -126,21 +95,15 @@ export default function Hero() {
                 />
               </svg>
             </span>
-          </motion.h1>
+          </h1>
 
           {/* Tagline */}
-          <motion.p
-            variants={itemVariants}
-            className="font-sans text-xl text-text-secondary leading-relaxed mb-12 max-w-2xl text-balance"
-          >
+          <p className="font-sans text-xl text-text-secondary leading-relaxed mb-12 max-w-2xl text-balance">
             {siteConfig.tagline}
-          </motion.p>
+          </p>
 
           {/* CTAs */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
-          >
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <button onClick={scrollToWork} className="btn-primary text-base">
               View My Work
               <ArrowDown size={16} />
@@ -148,13 +111,10 @@ export default function Hero() {
             <button onClick={scrollToContact} className="btn-secondary text-base">
               Get In Touch
             </button>
-          </motion.div>
+          </div>
 
           {/* Scroll indicator */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-20 hidden md:flex items-center gap-3 text-text-muted text-sm font-sans"
-          >
+          <div className="mt-20 hidden md:flex items-center gap-3 text-text-muted text-sm font-sans">
             <motion.div
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
@@ -163,8 +123,8 @@ export default function Hero() {
               <div className="w-1 h-1.5 bg-text-muted rounded-full" />
             </motion.div>
             <span>Scroll to explore</span>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   )
