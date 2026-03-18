@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { DM_Serif_Display, DM_Sans } from 'next/font/google'
 import './globals.css'
 
@@ -71,6 +72,18 @@ export default function RootLayout({
     >
       <body className="bg-background text-text font-sans antialiased">
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FE82FK64YV"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FE82FK64YV');
+          `}
+        </Script>
         <Analytics />
       </body>
     </html>
