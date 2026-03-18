@@ -84,7 +84,7 @@ export const caseStudies: CaseStudy[] = [
     context: 'UI/UX Design · Academic Project',
     role: 'UX Designer',
     description:
-      'Designed a habit-forming journaling app to help students manage stress and build emotional resilience. Applied the Hooked Model framework and validated through 6-participant usability testing.',
+      'Boosted consistency in mental well-being practices by helping students build and sustain stress-management habits through a structured, low-friction experience.',
     tags: ['Mobile Design', 'Habit Design', 'Wellness'],
     metrics: ['88.9% task success rate', '6 usability test participants', '16-week project'],
     image: 'constant.png',
@@ -97,7 +97,7 @@ export const caseStudies: CaseStudy[] = [
     context: 'UX Design · Academic Project',
     role: 'UX Designer',
     description:
-      'Built and operationalized an atomic design system with design tokens and reusable components. Launched flagship website that increased inbound inquiries by 50%.',
+      'Minimized support queries and increased user confidence by making product functionality instantly understandable through an interactive virtual clock within a streamlined e-commerce experience.',
     tags: ['Design Systems', 'Atomic Design', 'Web Design'],
     metrics: ['40% projected reduction in customer support calls', '6 usability tests conducted', '16-week end-to-end product design'],
     image: 'sharp.png',
