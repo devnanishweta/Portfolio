@@ -83,7 +83,7 @@ export default function Footer() {
         {/* Bottom note */}
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="font-sans text-xs text-text-muted">
-            Designed & built with care · Next.js · Tailwind CSS · Cursor
+            Built in 48 hours. Claude Code. Cursor. Vercel.
           </p>
         </div>
       </div>
