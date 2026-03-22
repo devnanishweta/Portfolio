@@ -549,6 +549,86 @@ export default function UsherCaseStudy() {
         </div>
       </section>
 
+      {/* ── Design (lo-fi → UI → hi-fi) — mirrors Sharp case study structure ── */}
+      <section className="bg-surface py-20 px-6 md:px-8 lg:px-12">
+        <div className="container-inner">
+          <FadeUp className="mb-14">
+            <p className="section-label mb-2">Design</p>
+            <h2 className="font-display text-3xl md:text-4xl text-text leading-snug max-w-2xl">
+              From lo-fi sketches to a polished mobile experience
+            </h2>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <FadeUp>
+              <div className="bg-background rounded-2xl border border-border overflow-hidden">
+                <div className="aspect-[4/3] bg-surface flex items-center justify-center border-b border-border">
+                  <img
+                    src="/images/usher-lofi.png"
+                    alt="Usher lo-fi wireframes"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="font-sans text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                    Lo-fi Wireframes
+                  </p>
+                  <p className="font-sans text-sm text-text-secondary leading-relaxed">
+                    Low-fidelity wireframes helped map navigation patterns, search flows, and core
+                    screens before committing to visual polish — validating structure against
+                    student mental models from research.
+                  </p>
+                </div>
+              </div>
+            </FadeUp>
+
+            <FadeUp delay={0.08}>
+              <div className="bg-background rounded-2xl border border-border overflow-hidden">
+                <div className="aspect-[4/3] bg-surface flex items-center justify-center border-b border-border">
+                  <img
+                    src="/images/usher-ui-kit.png"
+                    alt="Usher UI kit and components"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="font-sans text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                    UI Exploration
+                  </p>
+                  <p className="font-sans text-sm text-text-secondary leading-relaxed">
+                    Defined typography, color, and component patterns for a mobile-first companion
+                    that feels academic yet approachable — balancing clarity, trust, and scanability
+                    for quick discovery between classes.
+                  </p>
+                </div>
+              </div>
+            </FadeUp>
+          </div>
+
+          <FadeUp delay={0.1}>
+            <div className="bg-background rounded-2xl border border-border overflow-hidden">
+              <div className="aspect-[16/7] bg-surface flex items-center justify-center border-b border-border">
+                <img
+                  src="/images/usher-hifi.png"
+                  alt="Usher hi-fi screens"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-6 max-w-2xl">
+                <p className="font-sans text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                  Hi-fi Wireframes
+                </p>
+                <p className="font-sans text-sm text-text-secondary leading-relaxed">
+                  High-fidelity screens translated research into tangible interactions — from
+                  discovery and handoff to engaging with course-aligned resources — with clear
+                  hierarchy, affordances, and a consistent system across key flows.
+                </p>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
       {/* ── Design Decisions ── */}
       <section className="section-padding">
         <div className="container-inner">

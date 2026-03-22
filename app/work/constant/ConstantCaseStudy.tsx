@@ -420,10 +420,9 @@ export default function ConstantCaseStudy() {
         </div>
       </section>
 
-      {/* ── Solution Mockup ── */}
-      <section className="bg-text py-24 px-6 md:px-8 lg:px-12 overflow-hidden">
+      {/* ── The App in Action (prototype — continues The Solution) ── */}
+      <section className="bg-text py-24 px-6 md:px-8 lg:px-12 overflow-hidden border-t border-background/10">
         <div className="container-inner">
-          {/* Heading */}
           <FadeUp className="text-center mb-16">
             <p className="font-sans text-xs font-semibold text-primary-light uppercase tracking-widest mb-3">
               The App in Action
@@ -433,7 +432,6 @@ export default function ConstantCaseStudy() {
             </h3>
           </FadeUp>
 
-          {/* Video mockup */}
           <FadeUp delay={0.15} className="flex justify-center">
             <div
               className="relative overflow-hidden rounded-3xl"
@@ -450,7 +448,6 @@ export default function ConstantCaseStudy() {
             </div>
           </FadeUp>
 
-          {/* Caption + CTA */}
           <FadeUp delay={0.3} className="text-center mt-10 flex flex-col items-center gap-5">
             <p className="font-sans text-sm text-background/40">
               Prototype walkthrough · Figma
@@ -468,8 +465,64 @@ export default function ConstantCaseStudy() {
         </div>
       </section>
 
+      {/* ── Design Process ── */}
+      <section className="bg-surface py-20 px-6 md:px-8 lg:px-12 border-t border-border">
+        <div className="container-inner">
+          <FadeUp className="mb-14">
+            <p className="section-label mb-2">Design Process</p>
+            <h2 className="font-display text-3xl md:text-4xl text-text leading-snug max-w-2xl">
+              From lo-fi to launch-ready in five stages
+            </h2>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+            {[
+              {
+                step: '01',
+                phase: 'Discover',
+                items: ['Screener survey', 'Secondary research', 'Competitive analysis', 'Stakeholder interview'],
+              },
+              {
+                step: '02',
+                phase: 'Define',
+                items: ['Affinity mapping', 'SWOT analysis', 'MoSCoW prioritization', 'Hooked Model mapping'],
+              },
+              {
+                step: '03',
+                phase: 'Design',
+                items: ['Information architecture', 'User flows', 'Lo-fi wireframes', 'Style guide & UI kit'],
+              },
+              {
+                step: '04',
+                phase: 'Test',
+                items: ['Hi-fi prototype', 'Usability testing (6 students)', '12 core tasks', 'Issue documentation'],
+              },
+              {
+                step: '05',
+                phase: 'Deliver',
+                items: ['Iterated UI designs', 'Design system', 'Handoff-ready prototype', 'Before/after documentation'],
+              },
+            ].map((item, i) => (
+              <FadeUp key={item.phase} delay={i * 0.07}>
+                <div className="bg-background rounded-2xl p-6 border border-border h-full">
+                  <div className="font-display text-2xl text-primary/30 mb-1">{item.step}</div>
+                  <h4 className="font-sans font-semibold text-base text-text mb-4">{item.phase}</h4>
+                  <ul className="space-y-2">
+                    {item.items.map((task) => (
+                      <li key={task} className="font-sans text-xs text-text-secondary leading-relaxed">
+                        {task}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Design Strategy: Hooked Model ── */}
-      <section className="bg-text py-24 px-6 md:px-8 lg:px-12">
+      <section className="bg-text py-24 px-6 md:px-8 lg:px-12 border-t border-background/10">
         <div className="container-inner">
           <FadeUp className="mb-16">
             <p className="font-sans text-xs font-semibold text-primary-light uppercase tracking-widest mb-3">
@@ -664,59 +717,83 @@ export default function ConstantCaseStudy() {
         </div>
       </section>
 
-      {/* ── Design Process ── */}
-      <section className="bg-surface py-20 px-6 md:px-8 lg:px-12">
+      {/* ── Design (lo-fi → UI → hi-fi) — same structure as Usher / Sharp ── */}
+      <section className="bg-surface py-20 px-6 md:px-8 lg:px-12 border-t border-border">
         <div className="container-inner">
           <FadeUp className="mb-14">
-            <p className="section-label mb-2">Design Process</p>
+            <p className="section-label mb-2">Design</p>
             <h2 className="font-display text-3xl md:text-4xl text-text leading-snug max-w-2xl">
-              From lo-fi to launch-ready in five stages
+              From lo-fi sketches to a calm, habit-ready mobile experience
             </h2>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-            {[
-              {
-                step: '01',
-                phase: 'Discover',
-                items: ['Screener survey', 'Secondary research', 'Competitive analysis', 'Stakeholder interview'],
-              },
-              {
-                step: '02',
-                phase: 'Define',
-                items: ['Affinity mapping', 'SWOT analysis', 'MoSCoW prioritization', 'Hooked Model mapping'],
-              },
-              {
-                step: '03',
-                phase: 'Design',
-                items: ['Information architecture', 'User flows', 'Lo-fi wireframes', 'Style guide & UI kit'],
-              },
-              {
-                step: '04',
-                phase: 'Test',
-                items: ['Hi-fi prototype', 'Usability testing (6 students)', '12 core tasks', 'Issue documentation'],
-              },
-              {
-                step: '05',
-                phase: 'Deliver',
-                items: ['Iterated UI designs', 'Design system', 'Handoff-ready prototype', 'Before/after documentation'],
-              },
-            ].map((item, i) => (
-              <FadeUp key={item.phase} delay={i * 0.07}>
-                <div className="bg-background rounded-2xl p-6 border border-border h-full">
-                  <div className="font-display text-2xl text-primary/30 mb-1">{item.step}</div>
-                  <h4 className="font-sans font-semibold text-base text-text mb-4">{item.phase}</h4>
-                  <ul className="space-y-2">
-                    {item.items.map((task) => (
-                      <li key={task} className="font-sans text-xs text-text-secondary leading-relaxed">
-                        {task}
-                      </li>
-                    ))}
-                  </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <FadeUp>
+              <div className="bg-background rounded-2xl border border-border overflow-hidden">
+                <div className="aspect-[4/3] bg-surface flex items-center justify-center border-b border-border">
+                  <img
+                    src="/images/constant-lofi.png"
+                    alt="Constant lo-fi wireframes"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-              </FadeUp>
-            ))}
+                <div className="p-6">
+                  <p className="font-sans text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                    Lo-fi Wireframes
+                  </p>
+                  <p className="font-sans text-sm text-text-secondary leading-relaxed">
+                    Low-fidelity wireframes mapped journaling flows, mood logging, and streak
+                    mechanics before visual polish — keeping the experience lightweight enough for
+                    daily use while still feeling trustworthy.
+                  </p>
+                </div>
+              </div>
+            </FadeUp>
+
+            <FadeUp delay={0.08}>
+              <div className="bg-background rounded-2xl border border-border overflow-hidden">
+                <div className="aspect-[4/3] bg-surface flex items-center justify-center border-b border-border">
+                  <img
+                    src="/images/constant-ui-kit.png"
+                    alt="Constant UI exploration and components"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="font-sans text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                    UI Exploration
+                  </p>
+                  <p className="font-sans text-sm text-text-secondary leading-relaxed">
+                    Explored color, typography, and component patterns that feel warm and grounded —
+                    reinforcing emotional safety and consistency across journaling, insights, and
+                    gentle nudges without feeling clinical or overwhelming.
+                  </p>
+                </div>
+              </div>
+            </FadeUp>
           </div>
+
+          <FadeUp delay={0.1}>
+            <div className="bg-background rounded-2xl border border-border overflow-hidden">
+              <div className="aspect-[16/7] bg-surface flex items-center justify-center border-b border-border">
+                <img
+                  src="/images/constant-hifi.png"
+                  alt="Constant hi-fi screens"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-6 max-w-2xl">
+                <p className="font-sans text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                  Hi-fi Wireframes
+                </p>
+                <p className="font-sans text-sm text-text-secondary leading-relaxed">
+                  High-fidelity screens brought the habit loop to life — clear entry points, readable
+                  mood and streak summaries, and flows that supported reflection in minutes, not
+                  minutes of setup — ready for usability testing with students.
+                </p>
+              </div>
+            </div>
+          </FadeUp>
         </div>
       </section>
 
